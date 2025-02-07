@@ -1,23 +1,29 @@
 import { useState } from "react";
 import lovesvg from "./assets/All You Need Is Love SVG Cut File.svg";
 import lovesvg2 from "./assets/Love In The Air SVG Cut File.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
 
+  const navigate = useNavigate();
+
   const handleNoClick = () => {
+    if (noCount >= 0) {
+      navigate("/qr");
+    }
     setNoCount(noCount + 1);
   };
+
+
 
   const getNoButtonText = () => {
     const phrases = [
       "No",
       "aw man",
       "don't be a bloke",
-      "Really?",
-      "Really sure?",
       "PLS PLS PLS PLS",
       "u r EVIL",
       "EVIL GF!",
@@ -35,7 +41,7 @@ export default function Page() {
       "BLOKE EVIL GF",
       "you're breaking my heart ;(",
       "plsss? :( You're breaking my heart",
-      "i wil lgive u 1 million kisses if u say yes",
+      "i will give u 1 million kisses if u say yes",
       "oki i cri now goodbye",
     ];
 

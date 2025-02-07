@@ -12,6 +12,7 @@ import Valentine6 from './valentine6.jsx'
 import Valentine7 from './valentine7.jsx'
 import Valentine8 from './valentine8.jsx'
 import Valentinee from './valentinee.jsx'
+import QR from './qr.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/valentinee" element={<Valentinee />} />
         <Route path="/valentine8" element={<Valentine8 />} />
         <Route path="/valentine" element={<App />} />
+        <Route path ="/qr" element={<QR />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
